@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Ride - Rider</title>
+    <link rel="stylesheet" href="rider.css">
+</head>
+<body>
+    <div class="page-layout">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Rider</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Dashboard</a></li>
+                <li class="active"><a href="#">Request Ride</a></li>
+                <li><a href="#">Ride History</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#">&larr; Log Out</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="form-container">
+                <h1>Welcome, User!</h1>
+                <p>Request A Ride</p>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="passengerId">Your Passenger ID</label>
+                        <input type="number" id="passengerId" placeholder="Enter your ID (e.g., 1)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickupText">Pickup Location (Lat, Lon)</label>
+                        <div class="location-inputs">
+                            <input type="text" id="pickupLat" placeholder="Latitude" value="10.772" required>
+                            <input type="text" id="pickupLon" placeholder="Longitude" value="106.698" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="destinationText">Destination (Lat, Lon)</label>
+                        <div class="location-inputs">
+                            <input type="text" id="dropoffLat" placeholder="Latitude" value="10.779" required>
+                            <input type="text" id="dropoffLon" placeholder="Longitude" value="106.702" required>
+                        </div>
+                    </div>
+                    <button type="submit" id="bookBtn">Request Ride</button>
+                </form>
+                <div id="result-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="modal-overlay">
+        <div class="modal-content">
+            <p id="confirmationText"></p>
+            <button id="okBtn">Ok</button>
+        </div>
+    </div>
+
+    <script src="rider.js"></script>
+</body>
+</html>

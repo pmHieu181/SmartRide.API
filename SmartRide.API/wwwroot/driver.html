@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Ride - Driver</title>
+    <link rel="stylesheet" href="rider.css">
+    <link rel="stylesheet" href="driver.css">
+</head>
+<body>
+    <div class="page-layout">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Driver</h2>
+            </div>
+            <ul class="menu">
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li><a href="#">Ride History</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#">&larr; Log Out</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="table-container">
+                <h1>Available Rides</h1>
+                <div class="driver-info">
+                    <label for="driverId">Your Driver ID:</label>
+                    <input type="number" id="driverId" placeholder="Enter your ID (e.g., 2)">
+                    <button id="refreshBtn">Refresh</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rider</th>
+                            <th>Pickup</th>
+                            <th>Destination</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ridesTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="driver.js"></script>
+</body>
+</html>
